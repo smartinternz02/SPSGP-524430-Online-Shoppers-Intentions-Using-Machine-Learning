@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predict</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/predict.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Online Shoppers Intention Prediction Website</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="predict.html">Predict</a></li>
+        </ul>
+    </nav>
+    <section>
+        <h2>Predict</h2>
+        <form action="/Online_Shoppers_intension" method="post">
+            <h2>Welcome to the ONLINE SHOPPERS INTENSION prediction site</h2>
+            <table cellpadding="20" width="40%" align="center" cellspacing="1">
+                <tr>
+                    <td>
+                        <label for="ProductRelated">ProductRelated :</label>
+                    </td>
+                    <td><input type="number" name="ProductRelated" size="50" required placeholder="Enter Product number" />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td><label for="ProductRelated_Duration"> ProductRelated_Duration :</label></td>
+                    <td><input type="number"  name="ProductRelated_Duration" required size="30"
+                            placeholder="Enter the duration" /></td>
+                </tr>
+    
+                <tr>
+                    <td><label for="BounceRates"> BounceRates (between 0 - 1) : </label></td>
+                    <td><input type="number" step="any" name="BounceRates" required size="30"
+                            placeholder="Enter BounceRates" min="0" max="1"/></td>
+                </tr>
+    
+                <tr>
+                    <td><label for="ExitRates"> ExitRates (between 0 - 1) : </label></td>
+                    <td><input type="number" step="any" name="ExitRates" required size="30" placeholder="Enter ExitRates " min="0" max="1"/>
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td><label for="PageValues"> PageValues : </label></td>
+                    <td><input type="number" step="any" name="PageValues" required size="30" placeholder="Enter PageValues" /></td>
+                </tr>
+    
+                <tr>
+                    <td><label for="specialday"> SpecialDay : </label></td>
+                    <td><font >"Is today special day  "</font> <input type="number" required name="specialday" min="0" step="1" max="1" ></td>
+                </tr>
+    
+                <tr>
+                    <td> <label for="month">Month : </label></td>
+                    <td><select name="month" required>
+                            <option value="11" >January</option>
+                            <option value="2">February</option>
+                            <option value="5">March</option>
+                            <option value="10">April</option>
+                            <option value="6">May</option>
+                            <option value="4">June</option>
+                            <option value="3">July</option>
+                            <option value="0">August</option>
+                            <option value="9">September</option>
+                            <option value="8">October</option>
+                            <option value="7">November</option>
+                            <option value="1">December</option>
+                        </select></td>
+                </tr>
+    
+                <tr>
+                    <td><label for="Region"> Region : </label></td>
+                    <td><input type="number"  name="Region" required size="30" placeholder="Mention the Region value" />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td><label for="TrafficType"> TrafficType : </label></td>
+                    <td><input type="number"  name="TrafficType" required size="50" placeholder="Enter type of Traffic" />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td><label for="VisitorType"> VisitorType : </label> </td>
+                    <td><input type="number"  name="VisitorType" required size="50" placeholder="Enter type of Visitor" />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td><label for="weekend">Weekend : </label></td>
+                    <td><font>"Is today weekend "</font> <input type="number" required name="weekend" min="0" step="1" max="1" </td>
+                </tr>
+                <tr><td></td></tr>
+                <tr></tr>
+            </table>
+           
+            <input type="submit" name="submit" id="submit" value="submit">
+        </form>
+        <b>{{prediction}}</b> <!--  y  is used to generate the output--->
+    
+    </section>
+</body>
+</html>

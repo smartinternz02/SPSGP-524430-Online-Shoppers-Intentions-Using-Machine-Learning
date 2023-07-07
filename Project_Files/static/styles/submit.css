@@ -1,0 +1,90 @@
+        /* Body Styles */
+        body {
+            background-color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #444;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            color: #fff;
+            display: inline-block;
+            margin: 0 10px;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #555;
+        }
+
+        /* Section Styles */
+        section {
+            background-color: #fff;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Result Styles */
+        .prediction-result {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 20px;
+            margin: 30%;
+            border-radius: 10px;
+            animation: fade-in 1s;
+
+        }
+        h3 {
+            text-align: center;
+            font-family: Verdana;
+            color: #ffc310;
+            animation: blink-text 1.9s linear infinite;
+            font-size: 6em;
+           }
+        /* Animation Styles */
+        @keyframes fade-in {
+            0% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+        @keyframes blink-text {
+            0% {
+             opacity: 0;
+            }
+            50% {
+             opacity: 1;
+            }
+            100% {
+             opacity: 0;
+            }
